@@ -3,6 +3,7 @@ import { navLinks } from "../data.js";
 import Linkedin_Icon from "./Linkedin_Icon.jsx";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import GithubIcon from "./GithubIcon.jsx";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -72,10 +73,16 @@ export default function Navbar() {
             })}
           </ul>
           {toggleBtn}
+
           {/* Social_Icons Class */}
-          <button className="flex items-center mx-4 p-2  max-lg:hidden max-sm:hidden">
-            <Linkedin_Icon className="w-4 h-4  opacity-70 hover:fill-blue-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
-          </button>
+          <div className="flex">
+            <button className="flex items-center p-2  max-lg:hidden max-sm:hidden">
+              <Linkedin_Icon className="w-4 h-4  opacity-70 hover:fill-blue-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
+            </button>
+            <button className="flex items-center mr-4 p-2  max-lg:hidden max-sm:hidden">
+              <GithubIcon className="w-4 h-4  opacity-70 hover:fill-purple-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
+            </button>
+          </div>
         </nav>
 
         {/* Menu Class */}
