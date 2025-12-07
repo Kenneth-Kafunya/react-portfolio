@@ -1,3 +1,5 @@
+import Linkedin_Icon from "./components/Linkedin_Icon";
+
 export const navLinks = [
   {
     id: "home",
@@ -14,17 +16,5 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projects",
-  },
-];
-
-export const lg_Btn = [
-  {
-    id: "download_CV",
-    title: "Download CV",
-  },
-
-  {
-    id: "reach_out",
-    title: "Reach out",
   },
 ];
