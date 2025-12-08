@@ -1,3 +1,7 @@
 @import "tailwindcss";
 
 --breakpoint-sm: 28rem;
+
+@theme {
+  --color-bgGreen: #86a493;
+}
