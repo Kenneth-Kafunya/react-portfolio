@@ -16,14 +16,14 @@ export default function GithubIcon({ className }) {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
-          fill="none"
-          fill-rule="evenodd"
+          strokeWidth="1"
+          fill="currentColor"
+          fillRule="evenodd"
         >
           <g
             id="Dribbble-Light-Preview"
             transform="translate(-140.000000, -7559.000000)"
-            fill="#000000"
+            fill="currentColor"
           >
             <g id="icons" transform="translate(56.000000, 160.000000)">
               <path

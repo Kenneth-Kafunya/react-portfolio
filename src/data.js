@@ -1,5 +1,3 @@
-import Linkedin_Icon from "./components/Linkedin_Icon";
-
 export const navLinks = [
   {
     id: "home",
@@ -44,22 +42,22 @@ export const SkillsArray = [
       {
         name: "Figma",
         expertise: "Experienced",
-        icon: "",
+        icon: "figmaIcon",
       },
       {
         name: "Zeplin",
         expertise: "Basic",
-        icon: "",
+        icon: "zeplinIcon",
       },
       {
         name: "Protopie",
         expertise: "Basic",
-        icon: "",
+        icon: "protopieIcon",
       },
       {
         name: "Suite",
         expertise: "Intermediate",
-        icon: "",
+        icon: "adobeIcon",
       },
     ],
   },
@@ -69,24 +67,24 @@ export const SkillsArray = [
     title: "Frontend Tools",
     tool: [
       {
-        name: "Html",
-        expertise: "Basic",
-        icon: "",
+        name: "Html/Css",
+        expertise: "intermediate",
+        icon: "htmlIcon",
       },
       {
-        name: "Css",
+        name: "React",
         expertise: "Basic",
-        icon: "",
+        icon: "reactIcon",
       },
       {
         name: "JavaScript",
         expertise: "Basic",
-        icon: "",
+        icon: "javascriptIcon",
       },
       {
         name: "Tailwind",
         expertise: "Basic",
-        icon: "",
+        icon: "tailwindIcon",
       },
     ],
   },
@@ -96,24 +94,24 @@ export const SkillsArray = [
     title: "Backend Tools",
     tool: [
       {
-        name: "Node Js",
+        name: "Postgres",
         expertise: "Basic",
-        icon: "",
+        icon: "postgresIcon",
       },
       {
         name: "Express Js",
         expertise: "Basic",
-        icon: "",
+        icon: "expressIcon",
       },
       {
         name: "Next Js",
         expertise: "Basic",
-        icon: "",
+        icon: "nextIcon",
       },
       {
         name: "Git",
         expertise: "Basic",
-        icon: "",
+        icon: "gitIcon",
       },
     ],
   },
@@ -125,22 +123,22 @@ export const SkillsArray = [
       {
         name: "Slack",
         expertise: "Basic",
-        icon: "",
+        icon: "slackIcon",
       },
       {
         name: "Asana",
         expertise: "Basic",
-        icon: "",
+        icon: "asanaIcon",
       },
       {
         name: "Zoom",
         expertise: "Basic",
-        icon: "",
+        icon: "zoomIcon",
       },
       {
         name: "G-suite",
         expertise: "Basic",
-        icon: "",
+        icon: "googleIcon",
       },
     ],
   },

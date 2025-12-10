@@ -1,4 +1,5 @@
 import { Expertise, SkillsArray } from "../data.js";
+import { skillsIcons } from "./iconMap.jsx";
 export default function Skills() {
   return (
     <section className="h-dvh bg-bgGreen">
@@ -28,13 +29,19 @@ export default function Skills() {
       <div className="skills">
         {SkillsArray.map((item) => {
           return (
-            <div className="toolbox border border-solid border-amber-400 w-[500px] mt-4">
+            <div
+              key={item.id}
+              className="toolbox border border-solid border-amber-400 w-[500px] mt-4"
+            >
               <h3>{item.title}</h3>
 
               {item.tool.map((tool) => {
                 return (
-                  <div>
-                    <span>{tool.icon}</span> <span>{tool.name}</span>
+                  <div key={tool.name} className="flex items-center gap-4 ">
+                    <span className="text-gray-50 fill-gray-50 w-4 h-4">
+                      {skillsIcons[tool.icon]}
+                    </span>{" "}
+                    <span>{tool.name}</span>
                   </div>
                 );
               })}

@@ -32,7 +32,7 @@ export default function Navbar() {
   const defaultlogoStyle =
     "Logo flex items-center w-10 h-10 mx-4 my-4 cursor-default align-middle rounded-4xl justify-center bg-amber-400  ";
 
-  const logoMenuOpen =
+  const altLogoStyle =
     "Logo flex items-center w-10 h-10 mx-4 my-4 cursor-default align-middle rounded-4xl justify-center text-gray-50";
 
   const menuVariants = {
@@ -48,7 +48,7 @@ export default function Navbar() {
     <>
       <div className=" w-full fixed flex justify-center top-0 z-50 left-0 ">
         <nav className="relative w-full mx-auto flex justify-between items-center  max-lg:px-4">
-          <div className={toggle ? `${logoMenuOpen} ` : `${defaultlogoStyle} `}>
+          <div className={toggle ? `${altLogoStyle} ` : `${defaultlogoStyle} `}>
             <h1 className="text-xl text-purple-800 font-bold">KK</h1>
           </div>
           <ul className="flex gap-8 items-center p-2 max-lg:hidden max-sm:hidden">
