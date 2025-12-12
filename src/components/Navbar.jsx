@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { navLinks } from "../data.js";
 import Linkedin_Icon from "./Linkedin_Icon.jsx";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
@@ -7,6 +7,8 @@ import GithubIcon from "./GithubIcon.jsx";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
   const handleMenuToggle = () => {
     setToggle((t) => !t);
   };
@@ -29,11 +31,28 @@ export default function Navbar() {
     );
   }
 
+  const changeNavbarColor = () => {
+    window.scrollY >= 30 ? setScroll(true) : setScroll(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarColor);
+
+    return () => {
+      window.removeEventListener("scroll", changeNavbarColor);
+    };
+  }, []);
+
   const defaultlogoStyle =
     "Logo flex items-center w-10 h-10 mx-4 my-4 cursor-default align-middle rounded-4xl justify-center bg-amber-400  ";
 
   const altLogoStyle =
     "Logo flex items-center w-10 h-10 mx-4 my-4 cursor-default align-middle rounded-4xl justify-center text-gray-50";
+
+  const navBarStyle =
+    "bg-gray-50 transition ease-in-out relative w-full mx-auto flex justify-between items-center z-50 max-lg:px-4";
+  const navBarDefault =
+    "relative w-full mx-auto flex justify-between items-center z-50 max-lg:px-4";
 
   const menuVariants = {
     hidden: { scale: 0 },
@@ -47,7 +66,7 @@ export default function Navbar() {
   return (
     <>
       <div className=" w-full fixed flex justify-center top-0 z-50 left-0 ">
-        <nav className="relative w-full mx-auto flex justify-between items-center  max-lg:px-4">
+        <nav className={scroll ? navBarStyle : navBarDefault}>
           <div className={toggle ? `${altLogoStyle} ` : `${defaultlogoStyle} `}>
             <h1 className="text-xl text-purple-800 font-bold">KK</h1>
           </div>
@@ -65,6 +84,8 @@ export default function Navbar() {
               );
             })}
           </ul>
+
+          {/*  Hamburger Menu*/}
           {toggleBtn}
 
           {/* Social_Icons Class */}

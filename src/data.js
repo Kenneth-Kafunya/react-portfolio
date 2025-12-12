@@ -21,7 +21,7 @@ export const Expertise = [
   {
     id: 1,
     title: "Product Designer",
-    company: "Locumator",
+    company: "Locumator Health and Human Services",
     start: "2022",
     end: "2024",
   },
@@ -37,7 +37,7 @@ export const Expertise = [
 export const SkillsArray = [
   {
     id: "design",
-    title: "Design Tools",
+    title: "Design",
     tool: [
       {
         name: "Figma",
@@ -64,7 +64,7 @@ export const SkillsArray = [
 
   {
     id: "frontend",
-    title: "Frontend Tools",
+    title: "Frontend",
     tool: [
       {
         name: "Html/Css",
@@ -91,7 +91,7 @@ export const SkillsArray = [
 
   {
     id: "backend",
-    title: "Backend Tools",
+    title: "Backend",
     tool: [
       {
         name: "Postgres",
@@ -118,7 +118,7 @@ export const SkillsArray = [
 
   {
     id: "communication",
-    title: "Comm Tools",
+    title: "Communication",
     tool: [
       {
         name: "Slack",

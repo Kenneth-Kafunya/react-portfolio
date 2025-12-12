@@ -3,5 +3,9 @@
 --breakpoint-sm: 28rem;
 
 @theme {
-  --color-bgGreen: #86a493;
+  --color-bgGreen-100: #86a493;
+  --color-bgGreen-200: #5e846f;
+  --color-bgGreen-300: #4a735b;
+  --color-bgGreen-400: #2a6141;
+  --color-bgGreen-500: #0d542b;
 }
