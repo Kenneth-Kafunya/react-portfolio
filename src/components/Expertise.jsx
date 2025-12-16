@@ -1,5 +1,5 @@
 import { Expertise, SkillsArray } from "../data.js";
-import { skillsIcons } from "./iconMap.jsx";
+import { skillsIcons } from "./IconMap.jsx";
 export default function Skills() {
   return (
     <section className="min-h-dvh bg-bgGreen-100 p-8">

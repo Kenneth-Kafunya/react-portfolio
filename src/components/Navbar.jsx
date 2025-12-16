@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, React } from "react";
 import { navLinks } from "../data.js";
 import Linkedin_Icon from "./Linkedin_Icon.jsx";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
@@ -117,7 +117,7 @@ export default function Navbar() {
         >
           {navLinks.map((link) => {
             return (
-              <>
+              <div key={link.id}>
                 <li
                   key={link.id}
                   className="flex justify-center w-full items-center list-none mt-1 "
@@ -129,7 +129,7 @@ export default function Navbar() {
                     {link.title}
                   </a>
                 </li>
-              </>
+              </div>
             );
           })}
           <div className="SocialIcons flex flex-row justify-center gap-2 mt-2 ">
