@@ -420,8 +420,8 @@ export const SocialIcons = {
   github: (
     <svg
       fill="currentColor"
-      width="800px"
-      height="800px"
+      width="16px"
+      height="16px"
       viewBox="0 0 20 20"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

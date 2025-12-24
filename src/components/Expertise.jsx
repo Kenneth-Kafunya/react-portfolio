@@ -1,13 +1,16 @@
 import { Expertise, SkillsArray } from "../data.js";
 import { skillsIcons } from "./IconMap.jsx";
+import Heading from "./Heading.jsx";
 export default function Skills() {
   return (
-    <section className="min-h-dvh bg-bgGreen-100 p-8">
-      <div className="heading flex flex-col text-gray-50 items-center p-8">
-        <small className="text-xl block">My expertise</small>
-        <h2 className="text-6xl font-bold">Experience & Skills</h2>
-      </div>
-      <div className="expertise-Container flex justify-center gap-28 items-center py-6 w-auto ">
+    <section id="expertise" className="min-h-dvh bg-bgGreen-100 p-8">
+      <Heading
+        sub={"My expertise"}
+        smallTextColor={"text-gray-100"}
+        heading={"Experience & Skills"}
+        textColor={"text-gray-100"}
+      />
+      <div className="expertise-Container flex justify-center items-start gap-28  py-6 w-auto ">
         <div className="experienceContainer flex flex-col gap-11 ">
           {Expertise.map((item) => {
             return (

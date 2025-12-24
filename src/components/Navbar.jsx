@@ -1,9 +1,9 @@
 import { useState, useEffect, React } from "react";
-import { navLinks } from "../data.js";
-import Linkedin_Icon from "./Linkedin_Icon.jsx";
+import { navLinks, MySocials } from "../data.js";
+import { SocialIcons } from "./IconMap.jsx";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import GithubIcon from "./GithubIcon.jsx";
+import { skillsIcons } from "./IconMap.jsx";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -44,15 +44,15 @@ export default function Navbar() {
   }, []);
 
   const defaultlogoStyle =
-    "Logo flex items-center w-10 h-10 mx-4 my-4 cursor-default align-middle rounded-4xl justify-center bg-amber-400  ";
+    "Logo flex items-center w-10 h-10 cursor-default align-middle rounded-4xl justify-center bg-amber-400  ";
 
   const altLogoStyle =
-    "Logo flex items-center w-10 h-10 mx-4 my-4 cursor-default align-middle rounded-4xl justify-center text-gray-50";
+    "Logo flex items-center w-10 h-10 cursor-default align-middle rounded-4xl justify-center text-gray-50";
 
   const navBarStyle =
-    "bg-gray-50 transition ease-in-out relative w-full mx-auto flex justify-between items-center z-50 max-lg:px-4";
+    "bg-gray-50 transition ease-in-out relative w-full px-8 mx-auto flex justify-between items-center z-50 max-lg:px-4";
   const navBarDefault =
-    "relative w-full mx-auto flex justify-between items-center z-50 max-lg:px-4";
+    "relative flex justify-between w-full mx-auto items-center z-50 px-8  max-lg:px-4";
 
   const menuVariants = {
     hidden: { scale: 0 },
@@ -89,13 +89,18 @@ export default function Navbar() {
           {toggleBtn}
 
           {/* Social_Icons Class */}
-          <div className="flex max-lg:hidden max-sm:hidden">
-            <button className="flex items-center p-2 ">
-              <Linkedin_Icon className="w-4 h-4  opacity-70 hover:fill-blue-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
-            </button>
-            <button className="flex items-center mr-4 p-2">
-              <GithubIcon className="w-4 h-4  opacity-70  hover:fill-purple-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
-            </button>
+          <div className="flex gap-4 max-lg:hidden max-sm:hidden">
+            {MySocials.map((item) => {
+              return (
+                <div key={item.id}>
+                  <a href={`${item.address}`} target="_blank" rel="noreferrer">
+                    <span className=" text-gray-900 justify-center p-3 w-4 h-4  opacity-70  hover:fill-purple-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 ">
+                      {SocialIcons[item.iconClass]}
+                    </span>
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </nav>
 
@@ -132,14 +137,6 @@ export default function Navbar() {
               </div>
             );
           })}
-          <div className="SocialIcons flex flex-row justify-center gap-2 mt-2 ">
-            <button className="flex items-center p-2">
-              <Linkedin_Icon className="w-4 h-4 opacity-70 hover:fill-blue-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
-            </button>
-            <button className="flex items-center p-2">
-              <GithubIcon className="w-4 h-4 opacity-70 max-lg:hover:fill-gray-50 hover:fill-blue-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 " />
-            </button>
-          </div>
         </motion.div>
       </div>
     </>

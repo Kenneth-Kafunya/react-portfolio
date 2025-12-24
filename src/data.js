@@ -4,14 +4,10 @@ import imageIII from "../src/assets/dummy_images/image3.webp";
 import imageIV from "../src/assets/dummy_images/image4.avif";
 
 export const navLinks = [
-  {
+  /* {
     id: "home",
     title: "Home",
-  },
-  {
-    id: "about",
-    title: "About",
-  },
+  }, */
   {
     id: "expertise",
     title: "Expertise",
@@ -19,6 +15,11 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projects",
+  },
+
+  {
+    id: "contact",
+    title: "Contact",
   },
 ];
 
@@ -181,5 +182,19 @@ export const Email = [
     title: "KennethKafunya@gmail.com",
     add: "kennethkafunya@gmail.com",
     icon: "email",
+  },
+];
+
+export const MySocials = [
+  {
+    id: "linkedin",
+    iconClass: "linkedin",
+    address: "https://www.linkedin.com/in/kenneth-kafunya-903b77105",
+  },
+  ,
+  {
+    id: "github",
+    iconClass: "github",
+    address: "https://github.com/Kenneth-Kafunya",
   },
 ];

@@ -1,17 +1,16 @@
 import { projectsData } from "../data";
+import Heading from "./Heading.jsx";
 
 import { Link } from "react-router-dom";
 export default function Projects() {
   return (
-    <section className="h-auto p-8 relative">
-      <div className="heading flex flex-col justify-center text-center p-8">
-        <small className="text-xl text-gray-500">
-          Case studies and live demos
-        </small>
-        <h2 className="text-6xl text-gray-700 font-bold">
-          My <span className="text-gray-500">Projects</span>{" "}
-        </h2>
-      </div>
+    <section id="projects" className="h-auto p-8 relative">
+      <Heading
+        sub={"Case studies and live demos"}
+        smallTextColor={"text-gray-500"}
+        heading={"My Projects"}
+        textColor={"text-gray-700"}
+      />
 
       <div className="projectTilesContainer grid grid-cols-[360px_360px] h-auto p-11 grid-rows-1fr gap-11 justify-center">
         {projectsData.map((project) => {

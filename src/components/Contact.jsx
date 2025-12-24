@@ -1,11 +1,17 @@
 import React from "react";
 import { Email } from "../data.js";
 import { SocialIcons } from "./IconMap.jsx";
+import Heading from "../components/Heading.jsx";
 export default function Contact() {
   return (
-    <section className="bg-gray-800 h-dvh">
-      Heading
-      <div className="contactBox flex h-1/2 items-center align-middle justify-center">
+    <section id="contact" className="bg-gray-800 h-auto p-8">
+      <Heading
+        sub={"Reach out"}
+        heading={"Contact"}
+        smallTextColor={"text-gray-100"}
+        textColor={"text-gray-100"}
+      />
+      <div className="contactBox flex h-1/2 items-center p-8 align-middle justify-center">
         {Email.map((item) => {
           return (
             <React.Fragment key={item.id}>
@@ -22,11 +28,10 @@ export default function Contact() {
                   </span>
                 </span>
                 <div className="socialContainer flex items-center gap-2">
-                  <span className=" border-l p-4 w-4 text-gray-300 ">
-                    {SocialIcons.linkedin}
-                  </span>
                   <a href="linkedin.com/in/kenneth-kafunya-903b77105">
-                    LinkedIn
+                    <span className="flex items-center gap-2">
+                      {SocialIcons.linkedin} LinkedIn
+                    </span>{" "}
                   </a>
                 </div>
               </div>
