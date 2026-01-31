@@ -12,8 +12,8 @@ export default function Hero() {
         </h1>
         <div className="descriptionHeader text-green-900 max-sm:pt-3 max-sm:w-1/2 flex mx-auto pt-4">
           <span className="text-6xl max-lg:text-4xl max-sm:text-xl tracking-tight pt-1">
-            <span className="">Product designer</span> and almost{" "}
-            <span className="">Web dev</span>.{" "}
+            <span className="">Product designer</span> and{" "}
+            <span className="">Coder</span>.{" "}
           </span>
         </div>
 
