@@ -43,6 +43,12 @@ export default function Navbar() {
     };
   }, []);
 
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const defaultlogoStyle =
     "Logo flex items-center w-10 h-10 cursor-default align-middle rounded-4xl justify-center bg-amber-400  ";
 
@@ -63,6 +69,8 @@ export default function Navbar() {
     hidden: { display: "none", opacity: 0 },
     visible: { opacity: 1, y: -30, transition: { delay: 0.5 } },
   };
+
+  //
   return (
     <>
       <div className=" w-full fixed flex justify-center top-0 z-50 left-0 ">
@@ -70,16 +78,19 @@ export default function Navbar() {
           <div className={toggle ? `${altLogoStyle} ` : `${defaultlogoStyle} `}>
             <h1 className="text-xl text-purple-800 font-bold">KK</h1>
           </div>
-          <ul className="flex gap-8 items-center p-2 max-lg:hidden max-sm:hidden">
+          <ul className="flex gap-8 items-center p-2 h-full max-lg:hidden max-sm:hidden">
             {navLinks.map((link) => {
               return (
                 <li
                   key={link.id}
                   className=" opacity-70 hover:opacity-100 transition ease-in-out duration-300 "
                 >
-                  <a href={`#${link.id}`} className="font-medium uppercase">
+                  <button
+                    onClick={() => scrollTo(link.id)}
+                    className="font-medium uppercase cursor-pointer ease-in-out hover:text-amber-400 transition"
+                  >
                     {link.title}
-                  </a>
+                  </button>
                 </li>
               );
             })}

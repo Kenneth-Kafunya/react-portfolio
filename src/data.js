@@ -1,7 +1,7 @@
-import imageI from "../src/assets/dummy_images/image1.jpg";
-import imageII from "../src/assets/dummy_images/image2.avif";
-import imageIII from "../src/assets/dummy_images/image3.webp";
-import imageIV from "../src/assets/dummy_images/image4.avif";
+import imageI from "./assets/dummy_images/image1.jpg";
+import imageII from "./assets/dummy_images/image2.avif";
+import imageIII from "./assets/dummy_images/image3.webp";
+import imageIV from "./assets/dummy_images/image4.avif";
 
 export const navLinks = [
   /* {

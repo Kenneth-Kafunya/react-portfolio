@@ -22,7 +22,11 @@ export default function Hero() {
         </p>
         <div className="button flex gap-6 mt-11 flex-row max-md:items-center max-md:flex-col">
           <LargeBtn title={"Download CV"} />
-          <LargeBtn title={"Let's Work"} BtnStyle={true} emailBtn={true} />
+          <LargeBtn
+            title={"Let’s get to work"}
+            BtnStyle={true}
+            emailBtn={true}
+          />
         </div>
       </div>
     </section>
