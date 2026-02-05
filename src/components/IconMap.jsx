@@ -427,7 +427,7 @@ export const SocialIcons = {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <title>github</title>
+      <title>Github</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>
       <g
@@ -492,12 +492,38 @@ export const GenIcons = {
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
+      <title>Scroll all the way up</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
         d="M5 15l7-7 7 7"
       />
+    </svg>
+  ),
+};
+
+export const LogoIcon = {
+  logoIcon: (
+    <svg
+      id="Layer_1"
+      className="h-10 w-10"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 70.98 71.49"
+    >
+      <title>Kenneth Kafunya's logo</title>
+      <ellipse cx="35.79" cy="35.78" rx="34" ry="33.89" fill="#ffba00" />
+      <g>
+        <path
+          d="M36.28,25.37h4.93s0,8.88,0,8.88c4.95-3.72,3.71-10.81,11.82-8.87l-6.82,10.2,7.81,10.49c-8.77,2.18-7.51-4.47-12.81-8.87l.98,8.87h-5.91s0-20.71,0-20.71Z"
+          fill="#751d69"
+        />
+        <path
+          d="M17.55,25.41h4.93s.49,8.89.49,8.89c2.72-5.05,4.27-10.4,11.34-8.88l-6.7,9.51,6.7,11.18c-7.14,1.67-8.03-4.22-11.34-8.88l-.49,8.89h-4.93v-20.72Z"
+          fill="#751d69"
+        />
+      </g>
     </svg>
   ),
 };

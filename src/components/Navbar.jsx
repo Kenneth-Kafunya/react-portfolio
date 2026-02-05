@@ -1,13 +1,14 @@
 import { useState, useEffect, React } from "react";
 import { navLinks, MySocials } from "../data.js";
-import { SocialIcons } from "./IconMap.jsx";
+import { SocialIcons, LogoIcon } from "./IconMap.jsx";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { skillsIcons } from "./IconMap.jsx";
+import MenuBtn from "./MenuBtn.jsx";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [active, setActive] = useState("");
 
   const handleMenuToggle = () => {
     setToggle((t) => !t);
@@ -31,6 +32,7 @@ export default function Navbar() {
     );
   }
 
+  // Change navbar color on scroll
   const changeNavbarColor = () => {
     window.scrollY >= 30 ? setScroll(true) : setScroll(false);
   };
@@ -43,18 +45,14 @@ export default function Navbar() {
     };
   }, []);
 
+  // Scroll to section
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
   };
 
-  const defaultlogoStyle =
-    "Logo flex items-center w-10 h-10 cursor-default align-middle rounded-4xl justify-center bg-amber-400  ";
-
-  const altLogoStyle =
-    "Logo flex items-center w-10 h-10 cursor-default align-middle rounded-4xl justify-center text-gray-50";
-
+  // Navbar styles and animation variants
   const navBarStyle =
     "bg-gray-50 transition ease-in-out relative w-full px-8 mx-auto flex justify-between items-center z-50 max-lg:px-4";
   const navBarDefault =
@@ -70,31 +68,61 @@ export default function Navbar() {
     visible: { opacity: 1, y: -30, transition: { delay: 0.5 } },
   };
 
+  //Active Section
+  const handleActive = (selected) => {
+    setActive(selected);
+  };
+
+  const sectionIds = navLinks.map((Currentsection) => Currentsection.id);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-96px 0px -80% 0px",
+        threshold: 0,
+      },
+    );
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   //
   return (
     <>
       <div className=" w-full fixed flex justify-center top-0 z-50 left-0 ">
         <nav className={scroll ? navBarStyle : navBarDefault}>
-          <div className={toggle ? `${altLogoStyle} ` : `${defaultlogoStyle} `}>
-            <h1 className="text-xl text-purple-800 font-bold">KK</h1>
+          <div>
+            <span>{LogoIcon.logoIcon}</span>
           </div>
-          <ul className="flex gap-8 items-center p-2 h-full max-lg:hidden max-sm:hidden">
+          <div className="flex gap-11 h-full items-center  max-lg:hidden max-sm:hidden">
             {navLinks.map((link) => {
               return (
-                <li
+                <MenuBtn
                   key={link.id}
-                  className=" opacity-70 hover:opacity-100 transition ease-in-out duration-300 "
+                  isSelected={active === link.id}
+                  onClick={() => {
+                    scrollTo(link.id);
+                    handleActive(link.id);
+                  }}
                 >
-                  <button
-                    onClick={() => scrollTo(link.id)}
-                    className="font-medium uppercase cursor-pointer ease-in-out hover:text-amber-400 transition"
-                  >
-                    {link.title}
-                  </button>
-                </li>
+                  {link.title}
+                </MenuBtn>
               );
             })}
-          </ul>
+          </div>
 
           {/*  Hamburger Menu*/}
           {toggleBtn}

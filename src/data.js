@@ -1,13 +1,14 @@
+import { title } from "framer-motion/client";
 import imageI from "./assets/dummy_images/image1.jpg";
 import imageII from "./assets/dummy_images/image2.avif";
 import imageIII from "./assets/dummy_images/image3.webp";
 import imageIV from "./assets/dummy_images/image4.avif";
 
 export const navLinks = [
-  /* {
+  {
     id: "home",
     title: "Home",
-  }, */
+  },
   {
     id: "expertise",
     title: "Expertise",
@@ -26,7 +27,7 @@ export const navLinks = [
 export const Expertise = [
   {
     id: 1,
-    title: "Product Designer",
+    title: "Product Designer(Remote)",
     company: "Locumator Health and Human Services",
     start: "2022",
     end: "2024",
@@ -42,26 +43,26 @@ export const Expertise = [
 
 export const SkillsArray = [
   {
-    id: "design",
-    title: "Design",
+    id: "skills",
+    title: "Skills",
     tool: [
       {
-        name: "Figma",
+        name: "UX research",
         expertise: "Experienced",
         icon: "figmaIcon",
       },
       {
-        name: "Zeplin",
-        expertise: "Basic",
+        name: "Wireframing",
+        expertise: "Experienced",
         icon: "zeplinIcon",
       },
       {
-        name: "Protopie",
-        expertise: "Basic",
+        name: "Prototyping",
+        expertise: "Experienced",
         icon: "protopieIcon",
       },
       {
-        name: "Suite",
+        name: "UI Design",
         expertise: "Intermediate",
         icon: "adobeIcon",
       },
@@ -69,53 +70,53 @@ export const SkillsArray = [
   },
 
   {
-    id: "frontend",
-    title: "Frontend",
+    id: "tools",
+    title: "Tools",
     tool: [
       {
-        name: "Html/Css",
-        expertise: "intermediate",
+        name: "Figma",
+        expertise: "Intermediate",
         icon: "htmlIcon",
       },
       {
-        name: "React",
+        name: "Protopie",
         expertise: "Basic",
         icon: "reactIcon",
       },
       {
-        name: "JavaScript",
-        expertise: "Basic",
-        icon: "javascriptIcon",
+        name: "Adobe Suite",
+        expertise: "Intermediate",
+        icon: "tailwindIcon",
       },
       {
-        name: "Tailwind",
-        expertise: "Basic",
+        name: "Zeplin",
+        expertise: "Intermediate",
         icon: "tailwindIcon",
       },
     ],
   },
 
   {
-    id: "backend",
-    title: "Backend",
+    id: "technologies",
+    title: "Technologies",
     tool: [
       {
-        name: "Postgres",
+        name: "Html/Css",
         expertise: "Basic",
         icon: "postgresIcon",
       },
       {
-        name: "Express Js",
+        name: "React Js",
         expertise: "Basic",
         icon: "expressIcon",
       },
       {
-        name: "Next Js",
+        name: "TailwindCss",
         expertise: "Basic",
-        icon: "nextIcon",
+        icon: "tailwindIcon",
       },
       {
-        name: "Git",
+        name: "PostgreSQL",
         expertise: "Basic",
         icon: "gitIcon",
       },
@@ -123,27 +124,27 @@ export const SkillsArray = [
   },
 
   {
-    id: "communication",
-    title: "Communication",
+    id: "collaboration",
+    title: "Collaboration",
     tool: [
       {
         name: "Slack",
-        expertise: "Basic",
+        expertise: "Experienced",
         icon: "slackIcon",
       },
       {
         name: "Asana",
-        expertise: "Basic",
+        expertise: "Experienced",
         icon: "asanaIcon",
       },
       {
         name: "Zoom",
-        expertise: "Basic",
+        expertise: "Experienced",
         icon: "zoomIcon",
       },
       {
         name: "G-suite",
-        expertise: "Basic",
+        expertise: "Experienced",
         icon: "googleIcon",
       },
     ],
@@ -182,6 +183,14 @@ export const Email = [
     title: "KennethKafunya@gmail.com",
     add: "kennethkafunya@gmail.com",
     icon: "email",
+  },
+];
+
+export const Logo = [
+  {
+    id: 1,
+    title: "",
+    icon: "logoIcon",
   },
 ];
 

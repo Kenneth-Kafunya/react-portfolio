@@ -37,10 +37,10 @@ export default function Skills() {
         <div className="skillsContainer grid grid-cols-2 justify-end gap-6">
           {SkillsArray.map((item, index) => {
             const styleMap = {
-              design: "bg-bgGreen-500",
-              frontend: "bg-bgGreen-400",
-              backend: "bg-bgGreen-300",
-              communication: "bg-bgGreen-200",
+              skills: "bg-bgGreen-500",
+              tools: "bg-bgGreen-400",
+              technologies: "bg-bgGreen-300",
+              collaboration: "bg-bgGreen-200",
             };
             const boxStyle = styleMap[item.id];
 
@@ -59,12 +59,13 @@ export default function Skills() {
                       key={tool.name}
                       className="innerContainer grid grid-cols-2 py-3 items-center "
                     >
-                      <div className="flex items-center col-span-2 gap-3">
-                        <span className="text-gray-50 opacity-80 w-4 h-4">
+                      <div className="flex items-start col-span-2 gap-3">
+                        {/* <span className=" text-gray-50 opacity-80 w-4 h-4">
                           {skillsIcons[tool.icon]}
-                        </span>
+                        </span> */}
                         <span className="flex flex-col text-gray-50">
-                          {tool.name}{" "}
+                          <p>{tool.name} </p>
+
                           <small className="text-gray-50 opacity-55">
                             {tool.expertise}
                           </small>
