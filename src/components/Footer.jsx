@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-gray-800 text-gray-300 p-8 text-center">
-      <div className="footerContainer flex justify-between font-light text-sm">
+      <div className="footerContainer flex justify-between font-light text-sm max-sm:flex-col max-sm:gap-4 max-sm:items-center">
         {" "}
         <p>&copy;{`${year}`} Kenneth Kafunya, All rights reserved.</p>
         <p className="flex items-center gap-1">

@@ -14,6 +14,11 @@ export default function Navbar() {
     setToggle((t) => !t);
   };
 
+  const handleMenuClose = () => {
+    console.log("closing");
+    setToggle(false);
+  };
+
   let toggleBtn;
   if (toggle) {
     toggleBtn = (
@@ -54,9 +59,9 @@ export default function Navbar() {
 
   // Navbar styles and animation variants
   const navBarStyle =
-    "bg-gray-50 transition ease-in-out relative w-full px-8 mx-auto flex justify-between items-center z-50 max-lg:px-4";
+    "bg-gray-50 transition ease-in-out relative w-full px-8 mx-auto flex justify-between items-center z-50 max-sm:py-2 max-lg:px-4";
   const navBarDefault =
-    "relative flex justify-between w-full mx-auto items-center z-50 px-8  max-lg:px-4";
+    "relative flex justify-between w-full mx-auto items-center z-50 px-8  max-lg:px-4 max-lg:my-4";
 
   const menuVariants = {
     hidden: { scale: 0 },
@@ -116,6 +121,7 @@ export default function Navbar() {
                   onClick={() => {
                     scrollTo(link.id);
                     handleActive(link.id);
+                    handleMenuClose();
                   }}
                 >
                   {link.title}

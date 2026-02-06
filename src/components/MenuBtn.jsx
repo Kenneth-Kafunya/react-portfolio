@@ -5,6 +5,7 @@ export default function Menu({ children, onClick, isSelected }) {
     "flex opacity-100 text-amber-400 border-b-2 border-amber-400 items-center max-lg:hidden max-sm:hidden font-medium uppercase cursor-pointer h-full";
   return (
     <button
+      type="button"
       onClick={onClick}
       className={isSelected ? activeStyle : defaultStyle}
     >
