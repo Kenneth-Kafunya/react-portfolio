@@ -10,14 +10,14 @@ export default function Skills() {
         heading={"Experience & Skills"}
         textColor={"text-gray-100"}
       />
-      <div className="expertise-Container flex justify-center items-start gap-28 py-6 w-auto max-sm:flex-col max-sm:items-center max-sm:gap-12">
-        <div className="experienceContainer flex flex-col gap-11 max-sm:gap-6  ">
+      <div className="expertise-Container flex justify-center items-start gap-28 py-6 w-auto max-sm:flex-col max-sm:items-center max-sm:gap-12 max-md:flex-col max-md:items-center max-md:gap-12">
+        <div className="experienceContainer flex flex-col gap-11 max-sm:gap-6 ">
           {Expertise.map((item) => {
             return (
               <div
                 key={item.id}
                 id={`${item.id}`}
-                className="experience text-right flex flex-col max-sm:text-center gap-1"
+                className="experience text-right flex flex-col max-sm:text-center gap-1 max-md:text-center"
               >
                 <h3 className="font-bold text-[1.5rem] text-gray-50 ">
                   {item.start} - {item.end}
@@ -34,7 +34,7 @@ export default function Skills() {
           })}
         </div>
 
-        <div className="skillsContainer grid grid-cols-2 justify-end gap-6 max-sm:grid-cols-1 max-sm:gap-12">
+        <div className="skillsContainer grid grid-cols-2 justify-end gap-6 max-sm:grid-cols-1 max-sm:gap-6 ">
           {SkillsArray.map((item, index) => {
             const styleMap = {
               skills: "bg-bgGreen-500",

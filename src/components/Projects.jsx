@@ -12,7 +12,7 @@ export default function Projects() {
         textColor={"text-gray-700"}
       />
 
-      <div className="projectTilesContainer grid grid-cols-[360px_360px] h-auto p-11 grid-rows-1fr gap-11 justify-center max-sm:grid-cols-1 max-sm:gap-12 max-sm:p-6">
+      <div className="projectTilesContainer grid grid-cols-[360px_360px] h-auto p-11 grid-rows-1fr gap-11 justify-center max-sm:grid-cols-1 max-sm:gap-12 max-sm:p-6 max-md:grid-cols-1">
         {projectsData.map((project) => {
           return (
             <div key={project.id} className={`projectTile ${project.id}`}>
@@ -30,7 +30,7 @@ export default function Projects() {
                   className="rounded-3xl w-full h-full object-cover"
                 />
               </div>
-              <p className="text-center flex items-center justify-center h-[60px] p-2 mt-4 w-auto border-2 border-solid border-gray-200 rounded-2xl text-gray-500">
+              <p className="text-center flex items-center justify-center h-[60px] p-2 mt-4 w-auto border-2 border-solid border-gray-200 rounded-2xl text-gray-500 max-sm:h-auto max-sm:text-sm ">
                 {project.description.length > 90
                   ? project.description.slice(0, 80) + "..."
                   : project.description}

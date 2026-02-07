@@ -6,8 +6,8 @@ export default function Hero() {
       id="home"
       className="flex min-h-dvh my-11 justify-center items-center"
     >
-      <div className="flex flex-col w-1/2 max-sm:w-full max-sm:px-6 max-md:text-center ">
-        <h1 className="text-green-900 text-8xl max-lg:text-6xl max-md:text-6xl max-sm:text-6xl font-bold -tracking-normal">
+      <div className="flex flex-col w-1/2 max-sm:w-full max-sm:px-6 max-md:text-center max-xl:py-11 ">
+        <h1 className="text-green-900 text-8xl max-md:text-6xl max-sm:text-6xl font-bold -tracking-normal">
           Hey, Kenneth here —{" "}
         </h1>
         <div className="descriptionHeader text-green-900 max-sm:pt-3 max-sm:w-1/2 flex mx-auto pt-4">
