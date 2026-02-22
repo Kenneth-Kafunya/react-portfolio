@@ -4,7 +4,7 @@ import { SocialIcons } from "./IconMap.jsx";
 import Heading from "../components/Heading.jsx";
 export default function Contact() {
   return (
-    <section id="contact" className="bg-gray-800 h-dvh p-8">
+    <section id="contact" className="bg-gray-800 min-h-[70dvh] p-8 [@media(min-width:768px)_and_(max-width:1024px)]:min-h-[50dvh]">
       <Heading
         sub={"Reach out"}
         heading={"Contact"}

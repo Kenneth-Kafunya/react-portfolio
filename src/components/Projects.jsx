@@ -12,7 +12,7 @@ export default function Projects() {
         textColor={"text-gray-700"}
       />
 
-      <div className="projectTilesContainer grid grid-cols-[360px_360px] h-auto p-11 grid-rows-1fr gap-11 justify-center max-sm:grid-cols-1 max-sm:gap-12 max-sm:p-6 max-md:grid-cols-1">
+      <div className="projectTilesContainer grid grid-cols-[360px_360px] h-auto p-11 grid-rows-1fr gap-11 justify-center max-sm:grid-cols-1 max-sm:gap-12 max-sm:p-6 max-md:grid-cols-1 [@media(min-width:820px)_and_(max-width:840px)]:grid-cols-1">
         {projectsData.map((project) => {
           return (
             <div key={project.id} className={`projectTile ${project.id}`}>
