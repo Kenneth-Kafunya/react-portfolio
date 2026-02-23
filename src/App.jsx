@@ -1,7 +1,7 @@
 // import { useState } from "react";
 
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
+
 import Expertise from "./components/Expertise";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -11,7 +11,6 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 function App() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Expertise />
       <Projects />
