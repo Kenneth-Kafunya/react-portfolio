@@ -1,5 +1,5 @@
 import { Email } from "../data";
-import myCv from "../public/Kenneth-Kafunya_CV_2026.pdf";
+import myResume from "../public/Kenneth Kafunya - Resume_2026.pdf";
 export default function LargeBtn({
   title,
   BtnStyle = false,
@@ -24,7 +24,7 @@ export default function LargeBtn({
   } else {
     ctaBtn = (
       <a
-        href={`${myCv}`}
+        href={`${myResume}`}
         target="_blank"
         download
         className={BtnStyle ? `${solidBtn}` : `${outlineBtn}`}

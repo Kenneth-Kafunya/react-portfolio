@@ -61,7 +61,7 @@ export default function Navbar() {
   const navBarStyle =
     "bg-gray-50 transition ease-in-out relative w-full px-8 mx-auto flex justify-between items-center z-50 max-sm:py-2 max-lg:px-4 max-md:py-3 [@media(min-width:820px)_and_(max-width:840px)]:py-3";
   const navBarDefault =
-    "relative flex justify-between w-full mx-auto items-center z-50 px-8 max-lg:px-4 max-lg:my-4 [@media(min-width:820px)_and_(max-width:840px)]:py-3";
+    "relative flex justify-between w-full mx-auto items-center z-50 px-8 pb-4 max-lg:px-4 max-lg:my-4 [@media(min-width:820px)_and_(max-width:840px)]:py-3";
 
   const menuVariants = {
     hidden: { scale: 0 },
@@ -107,12 +107,12 @@ export default function Navbar() {
   //
   return (
     <>
-      <div className=" w-full fixed flex justify-center top-0 z-50 left-0 ">
+      <div className=" w-full fixed flex top-0 z-50 left-0 ">
         <nav className={scroll ? navBarStyle : navBarDefault}>
           <div>
             <span>{LogoIcon.logoIcon}</span>
           </div>
-          <div className="flex gap-11 h-full items-center  max-lg:hidden max-sm:hidden">
+          <div className="flex gap-11 h-full items-center max-lg:hidden max-sm:hidden">
             {navLinks.map((link) => {
               return (
                 <MenuBtn
@@ -134,7 +134,7 @@ export default function Navbar() {
           {toggleBtn}
 
           {/* Social_Icons Class */}
-          <div className="flex gap-4 max-lg:hidden max-sm:hidden">
+          {/*  <div className="flex gap-4 max-lg:hidden max-sm:hidden">
             {MySocials.map((item) => {
               return (
                 <div key={item.id}>
@@ -146,7 +146,7 @@ export default function Navbar() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </nav>
 
         {/* Menu Class */}

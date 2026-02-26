@@ -11,7 +11,7 @@ export default function Hero() {
 [@media(min-width:768px)_and_(max-width:1024px)]:min-h-dvh
 "
       >
-        <div className="flex flex-col w-1/2 mx-auto mt-11 max-sm:w-full max-sm:px-6 max-md:text-center max-xl:py-11 ">
+        <div className="flex flex-col w-1/2 mx-auto my-11 max-sm:w-full max-sm:px-6 max-md:text-center max-xl:py-8 ">
           <h1 className="text-green-900 text-8xl max-md:text-6xl max-sm:text-6xl font-bold -tracking-normal">
             Hey, Kenneth here —{" "}
           </h1>

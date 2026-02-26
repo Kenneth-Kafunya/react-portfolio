@@ -1,9 +1,3 @@
-import { title } from "framer-motion/client";
-import imageI from "./assets/dummy_images/image1.jpg";
-import imageII from "./assets/dummy_images/image2.avif";
-import imageIII from "./assets/dummy_images/image3.webp";
-import imageIV from "./assets/dummy_images/image4.avif";
-
 export const navLinks = [
   {
     id: "home",
@@ -151,37 +145,11 @@ export const SkillsArray = [
   },
 ];
 
-export const projectsData = [
-  {
-    id: "agripredict",
-    thumbnail: imageIII,
-    name: "Agripredict",
-    description:
-      "A technology platform focused on agriculture to reduce risk and improve productivity.",
-    alt: "Agripredict mobile app mockup image",
-  },
-  {
-    id: "fnbApp",
-    thumbnail: imageII,
-    name: "FNB App",
-    description: "A banking app for the youth.",
-    alt: "FNB mobile app mockup image",
-  },
-  {
-    id: "travelGuide",
-    thumbnail: imageIV,
-    name: "Sample App",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod aliqua adipiscing elit, sed do eiusmod aliqua.",
-    alt: "FNB mobile app mockup image",
-  },
-];
-
 export const Email = [
   {
     id: 1,
     title: "KennethKafunya@gmail.com",
-    add: "kennethkafunya@gmail.com",
+    addr: "kennethkafunya@gmail.com",
     icon: "email",
   },
 ];
