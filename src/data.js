@@ -163,12 +163,12 @@ export const Logo = [
 ];
 
 export const MySocials = [
-  {
+  /*   {
     id: "linkedin",
     iconClass: "linkedin",
     address: "https://www.linkedin.com/in/kenneth-kafunya-903b77105",
-  },
-  ,
+  }, */
+
   {
     id: "github",
     iconClass: "github",

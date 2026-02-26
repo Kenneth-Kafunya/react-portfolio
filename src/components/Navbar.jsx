@@ -134,19 +134,19 @@ export default function Navbar() {
           {toggleBtn}
 
           {/* Social_Icons Class */}
-          {/*  <div className="flex gap-4 max-lg:hidden max-sm:hidden">
+          <div className="flex gap-4 max-lg:hidden max-sm:hidden">
             {MySocials.map((item) => {
               return (
                 <div key={item.id}>
                   <a href={`${item.address}`} target="_blank" rel="noreferrer">
-                    <span className=" text-gray-900 justify-center p-3 w-4 h-4  opacity-70  hover:fill-purple-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 ">
+                    <span className=" text-gray-900 justify-center p-3 w-4 h-4  hover:fill-purple-800 hover:opacity-100 cursor-pointer transition ease-in-out duration-300 ">
                       {SocialIcons[item.iconClass]}
                     </span>
                   </a>
                 </div>
               );
             })}
-          </div> */}
+          </div>
         </nav>
 
         {/* Menu Class */}
