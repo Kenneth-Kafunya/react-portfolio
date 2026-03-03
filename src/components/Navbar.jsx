@@ -174,6 +174,11 @@ export default function Navbar() {
                 >
                   <a
                     href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo(link.id);
+                      handleMenuClose();
+                    }}
                     className="text-gray-500 text-xl cursor-pointer uppercase hover:text-gray-700 transition ease-in-out"
                   >
                     {link.title}
