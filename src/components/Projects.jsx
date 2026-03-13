@@ -37,7 +37,7 @@ export default function Projects() {
           return (
             <div
               key={post._id}
-              className="projects relative drop-shadow-md w-auto h-auto p-4 max-sm:p-2"
+              className="projects relative w-auto h-auto p-4 max-sm:p-2"
             >
               {" "}
               <div className="imgTile w-fit h-fit cursor-pointer">
@@ -54,18 +54,21 @@ export default function Projects() {
                   />
                 </a>
               </div>
-              <span className="flex-col">
+              <div className="flex flex-col max-w-[400px] fit-content h-auto p-2 bg-gray-200 rounded-b-2xl">
                 <a
                   href={`https://blog.kennethkafunya.com/${post.slug.current}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="max-w-[400px] h-fit"
+                  className="hover:underline"
                 >
-                  <p className="text-left text-lg font-medium flex items-center justify-center h-fit px-4 py-6 rounded-b-2xl bg-white text-gray-800 hover:underline transition ease-in-out max-sm:h-auto max-sm:text-sm">
-                    {post.title}{" "}
+                  <p className="font-medium text-gray-400 px-4 pt-2">
+                    {post.publishedAt}
                   </p>
+                  <span className="text-left text-lg font-medium flex flex-col items-center justify-center h-fit px-4 py-6 pt-2 rounded-b-2xl text-gray-800 hover:underline transition ease-in-out max-sm:h-auto max-sm:text-lg">
+                    {post.title}{" "}
+                  </span>
                 </a>
-              </span>
+              </div>
             </div>
           );
         })}
