@@ -4,7 +4,7 @@ import { urlFor } from "/imageURL";
 import Heading from "./Heading.jsx";
 
 const POSTS_QUERY = `
-  *[_type == "caseStudy" && defined(slug.current)]{
+  *[_type == "caseStudy" && defined(slug.current) ] | order(publishedAt desc) {
     _id,
     title,
     slug,

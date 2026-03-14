@@ -38,7 +38,7 @@ export default function Contact() {
                   >
                     {item.title}
                   </a>
-                  {github && (
+                  {/* {github && (
                     <a
                       href={github.address}
                       target="_blank"
@@ -47,7 +47,7 @@ export default function Contact() {
                     >
                       {SocialIcons.github}
                     </a>
-                  )}
+                  )} */}
                 </span>
               </div>
             </React.Fragment>
