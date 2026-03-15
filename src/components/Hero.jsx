@@ -7,16 +7,17 @@ export default function Hero() {
       <Navbar />
       <section
         id="home"
-        className="h-dvh flex items-center justify-center px-6
-[@media(min-width:768px)_and_(max-width:1024px)]:min-h-dvh
+        className="h-dvh flex items-center justify-center mt-11 px-6
+[@media(min-width:768px)_and_(max-width:1024px)]:min-h-dvh [@media(min-width:768px)_and_(max-width:1024px)]:mb-11
 "
       >
-        <div className="flex flex-col w-1/2 mx-auto my-11 max-sm:w-full max-sm:px-6 max-md:text-center max-xl:py-8 ">
+        <div className="flex flex-col w-1/2 mx-auto my-11 mt-5xl max-sm:w-2xl max-sm:px-6 max-md:text-center max-xl:py-8 ">
           <h1 className="text-green-900 text-8xl max-md:text-6xl max-sm:text-6xl font-bold -tracking-normal">
             Hey, Kenneth here —{" "}
           </h1>
-          <div className="descriptionHeader text-green-900 max-sm:pt-3 max-sm:w-1/2 flex mx-auto py-auto max-sm:justify-center max-sm:flex-col max-sm:gap-3">
-            <span className="text-6xl max-lg:text-4xl max-sm:text-xl tracking-tight pt-1">
+          <div className="descriptionHeader text-green-900 max-sm:pt-3 max-sm:w-full flex mx-auto py-auto max-sm:justify-center max-sm:flex-col max-sm:gap-3 [@media(min-width:768px)_and_(max-width:1024px)]:w-full [@media(min-width:768px)_and_(max-width:1024px)]:gap-3">
+            <span className="text-6xl max-lg:text-4xl max-sm:text-xl tracking-tight pt-1 max-sm:w-full ">
+              <span className="">3+ years</span> of experience as a{" "}
               <span className="">Product designer</span> and{" "}
               <span className="">Coding beginner</span>.{" "}
             </span>
