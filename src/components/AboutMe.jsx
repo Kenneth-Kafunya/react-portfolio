@@ -11,7 +11,7 @@ export default function AboutMe() {
       <div className="container flex max-w-6xl mx-auto w-1/2 items-center gap-15 mb-0 max-sm:flex-col max-sm:w-full max-sm:gap-0">
         <div className="circle absolute w-70 h-70 left-81 bottom-[-540px] bg-gray-300 rounded-full max-sm:hidden [@media(min-width:768px)_and_(max-width:1024px)]:hidden"></div>
         <img
-          src="../src/assets/images/photo-2.png"
+          src="/images/photo-2.png"
           alt="Kenneth Kafunya"
           className="w-full h-80 object-cover mx-auto z-10 rounded-full max-sm:hidden [@media(min-width:768px)_and_(max-width:1024px)]:hidden "
         />
