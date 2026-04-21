@@ -15,7 +15,7 @@ export default function LargeBtn({
   if (emailBtn) {
     ctaBtn = (
       <a
-        href={`mailto:${Email[0].add}`}
+        href={`mailto:${Email[0].addr}`}
         className={BtnStyle ? `${solidBtn}` : `${outlineBtn}`}
       >
         {title}
