@@ -1,5 +1,5 @@
 import { Email } from "../data";
-import myResume from "../public/Kenneth Kafunya - Resume_2026.pdf";
+import myResume from "../public/Kenneth_Kafunya_Product_Designer_CV.pdf";
 export default function LargeBtn({
   title,
   BtnStyle = false,

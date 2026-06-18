@@ -39,7 +39,7 @@ export const Expertise = [
 export const SkillsArray = [
   {
     id: "skills",
-    title: "Skills",
+    title: "Product Design",
     tool: [
       {
         name: "UX research",
@@ -47,7 +47,7 @@ export const SkillsArray = [
         icon: "figmaIcon",
       },
       {
-        name: "Wireframing",
+        name: "Design systems",
         expertise: "Experienced",
         icon: "zeplinIcon",
       },
@@ -74,17 +74,17 @@ export const SkillsArray = [
         icon: "htmlIcon",
       },
       {
-        name: "Protopie",
+        name: "Rest APIs",
         expertise: "Basic",
         icon: "reactIcon",
       },
       {
-        name: "Adobe Suite",
+        name: "GitHub",
         expertise: "Intermediate",
         icon: "tailwindIcon",
       },
       {
-        name: "Zeplin",
+        name: "Tailwind CSS",
         expertise: "Intermediate",
         icon: "tailwindIcon",
       },
@@ -93,7 +93,7 @@ export const SkillsArray = [
 
   {
     id: "technologies",
-    title: "Technologies",
+    title: "Frontend",
     tool: [
       {
         name: "Html/Css",
@@ -101,26 +101,26 @@ export const SkillsArray = [
         icon: "postgresIcon",
       },
       {
-        name: "React Js",
+        name: "React & Next Js",
         expertise: "Basic",
         icon: "expressIcon",
       },
       {
-        name: "TailwindCss",
-        expertise: "Basic",
-        icon: "tailwindIcon",
-      },
-      {
-        name: "PostgreSQL",
+        name: "Typescript",
         expertise: "Basic",
         icon: "gitIcon",
+      },
+      {
+        name: "Component archt",
+        expertise: "Basic",
+        icon: "tailwindIcon",
       },
     ],
   },
 
-  {
+  /* {
     id: "collaboration",
-    title: "Collaboration",
+    title: "Sofware",
     tool: [
       {
         name: "Slack",
@@ -143,7 +143,7 @@ export const SkillsArray = [
         icon: "googleIcon",
       },
     ],
-  },
+  }, */
 ];
 
 export const Email = [
