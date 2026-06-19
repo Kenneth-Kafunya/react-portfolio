@@ -49,22 +49,21 @@ export default function Projects() {
                   <img
                     src={urlFor(post.heroImage).width(400).height(300).url()}
                     alt={post.title}
-                    className="rounded-t-2xl"
+                    className="grayscale-90"
                     format="webp"
                   />
                 </a>
               </div>
-              <div className="flex flex-col max-w-[400px] fit-content h-auto p-2 bg-gray-800 rounded-b-2xl">
+              <div className="flex flex-col max-w-[400px] fit-content h-auto p-2">
                 <a
                   href={`https://blog.kennethkafunya.com/${post.slug.current}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
                 >
-                  <p className="font-medium text-gray-300 px-4 pt-2">
+                  {/* <p className="font-medium text-gray-500 pt-2">
                     {post.publishedAt}
-                  </p>
-                  <span className="text-left text-lg font-bold flex flex-col items-center justify-center h-fit px-4 py-6 pt-2 rounded-b-2xl text-gray-200 hover:underline transition ease-in-out max-sm:h-auto max-sm:text-lg">
+                  </p> */}
+                  <span className="text-left text-lg font-medium flex flex-col items-center justify-center h-fit py-6 pt-2 rounded-b-2xl text-gray-800  max-sm:h-auto max-sm:text-lg">
                     {post.title}{" "}
                   </span>
                 </a>
