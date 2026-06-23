@@ -1,14 +1,19 @@
 import React from "react";
-import { AppWindow, Apple } from "lucide-react";
+import { AppWindow, Apple, Smartphone } from "lucide-react";
 
 export default function ProjectCard({ post, urlFor }) {
   const title = post.title || "Untitled Project";
   const subtitle = post.subtitle || "Case Study";
   const description = post.description || "No description provided.";
+  const tags =
+    post.tags && post.tags.length > 0
+      ? post.tags.join(" • ")
+      : "No tags available.";
 
   // Construct dynamic links using your slug pattern
   const projectUrl = `https://blog.kennethkafunya.com/${post.slug?.current || ""}`;
   const appStoreUrl = post.appStoreUrl || "#";
+  const isFigma = post.appStoreUrl.includes("https://www.figma.com");
 
   // Build Sanity image URL dynamically, falling back to an Unsplash placeholder if heroImage is missing
   const imageUrl = post.heroImage
@@ -32,36 +37,41 @@ export default function ProjectCard({ post, urlFor }) {
         <h2 className="m-0 text-2xl font-bold text-gray-900 tracking-tight">
           {title}
         </h2>
-        <p className="mt-0.5 text-sm font-medium text-gray-500">{subtitle}</p>
+        <p className="mt-0.5 text-sm font-medium text-gray-400">{tags}</p>
 
         {/* Project Description */}
-        <p className="mt-4 text-[14px] leading-relaxed text-gray-600 line-clamp-3">
-          {description}
+        <p className="mt-4 text-sm leading-relaxed text-gray-700 line-clamp-3">
+          {subtitle}
         </p>
 
         {/* Dual Info Badges */}
         <div className="mt-6 grid grid-cols-2 gap-3">
           {/* App Store Redirect Block */}
           {post.appStoreUrl ? (
-            <a
-              href={appStoreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center rounded-2xl bg-gray-50 p-3 text-center border border-gray-100 transition-colors hover:bg-gray-100 text-decoration-none group"
-            >
-              <span className="text-[11px] font-medium uppercase tracking-wider text-gray-400 flex items-center gap-1">
-                <Apple className="h-3 w-3" /> App Store
-              </span>
-              <span className="mt-1 text-[13px] font-semibold text-blue-600 group-hover:underline">
-                Download
-              </span>
-            </a>
+            (() => {
+              return (
+                <a
+                  href={post.appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center rounded-2xl bg-gray-50 p-3 text-center border border-gray-100 transition-colors hover:bg-gray-100 text-decoration-none group"
+                >
+                  <span className="text-[11px] font-medium uppercase tracking-wider text-gray-400 flex items-center gap-1">
+                    {isFigma ? "" : ""}
+                    {isFigma ? "Prototype" : "App Store"}
+                  </span>
+                  <span className="mt-1 text-xs font-semibold text-blue-600 group-hover:underline">
+                    {isFigma ? "View" : "Download"}
+                  </span>
+                </a>
+              );
+            })()
           ) : (
             <div className="flex flex-col items-center justify-center rounded-2xl bg-gray-50 p-3 text-center border border-gray-100 opacity-50">
               <span className="text-[11px] font-medium uppercase tracking-wider text-gray-400 flex items-center gap-1">
                 App Store
               </span>
-              <span className="mt-1 text-[13px] font-semibold text-gray-400">
+              <span className="mt-1 text-xs font-semibold text-gray-400">
                 Web Only
               </span>
             </div>
@@ -73,7 +83,7 @@ export default function ProjectCard({ post, urlFor }) {
           href={projectUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-black py-3.5 text-center text-sm font-semibold text-white transition-opacity hover:opacity-90 text-decoration-none"
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-gray-800 py-3.5 text-center text-sm font-semibold text-white transition-opacity hover:opacity-90 text-decoration-none"
         >
           View Case Study
         </a>

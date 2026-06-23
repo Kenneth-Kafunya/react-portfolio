@@ -1,7 +1,7 @@
 import Heading from "./Heading";
 export default function AboutMe() {
   return (
-    <section id="about" className="min-h-dvh bg-bgGreen-200 p-8">
+    <section id="about" className="min-h-dvh bg-bgGreen-200 p-8 mt-6">
       <Heading
         sub={"Get to know me"}
         smallTextColor={"text-gray-100"}

@@ -11,12 +11,15 @@ const POSTS_QUERY = `
     slug,
     publishedAt,
     heroImage,
+    subtitle,
+    appStoreUrl,
+    tags
   }
 `;
 
 export default function Projects() {
   const [posts, setPosts] = useState([]);
-  console.log("Posts:", posts);
+  //console.log("Posts:", posts);
 
   useEffect(() => {
     client.fetch(POSTS_QUERY).then((data) => {
@@ -34,7 +37,7 @@ export default function Projects() {
       />
 
       {/* Grid container wrapping the dynamic cards */}
-      <div className="projectTilesContainer grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 h-auto p-11 gap-11 justify-center items-start max-sm:p-6">
+      <div className="projectTilesContainer grid grid-cols-[360px_360px] h-auto p-11 grid-rows-1fr gap-14 justify-center max-sm:grid-cols-1 max-sm:gap-12 max-sm:p-2 max-md:grid-cols-1 [@media(min-width:768px)_and_(max-width:1024px)]:gap-0">
         {posts.map((post) => (
           <ProjectCard key={post._id} post={post} urlFor={urlFor} />
         ))}
