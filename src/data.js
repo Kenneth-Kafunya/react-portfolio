@@ -70,22 +70,22 @@ export const SkillsArray = [
     tool: [
       {
         name: "Figma",
-        expertise: "Intermediate",
+        expertise: "Experienced",
         icon: "htmlIcon",
       },
       {
         name: "Rest APIs",
-        expertise: "Basic",
+        expertise: "Intermediate",
         icon: "reactIcon",
       },
       {
         name: "GitHub",
-        expertise: "Intermediate",
+        expertise: "Experienced",
         icon: "tailwindIcon",
       },
       {
         name: "Tailwind CSS",
-        expertise: "Intermediate",
+        expertise: "Experienced",
         icon: "tailwindIcon",
       },
     ],
@@ -97,22 +97,22 @@ export const SkillsArray = [
     tool: [
       {
         name: "Html/Css",
-        expertise: "Basic",
+        expertise: "Intermediate",
         icon: "postgresIcon",
       },
       {
         name: "React & Next Js",
-        expertise: "Basic",
+        expertise: "Intermediate",
         icon: "expressIcon",
       },
       {
         name: "Typescript",
-        expertise: "Basic",
+        expertise: "Intermediate",
         icon: "gitIcon",
       },
       {
         name: "Component archt",
-        expertise: "Basic",
+        expertise: "Intermediate",
         icon: "tailwindIcon",
       },
     ],
